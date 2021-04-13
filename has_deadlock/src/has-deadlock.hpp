@@ -7,9 +7,10 @@
 
 typedef hls::stream<int> stream_t;
 
-void block0 (stream_t &data_i, stream_t &coef_i, stream_t &feedback_i, stream_t &data_o);
-void block1 (stream_t &data_i, stream_t &data_o, stream_t &feedback_o);
+void block0 (stream_t &data_i, stream_t &coef_i, stream_t &feedback_i, stream_t &data_o, stream_t &dump_fb1);
+void block1 (stream_t &data_i, stream_t &data_o, stream_t &feedback_o, stream_t &dump_fb2);
 
-void top (stream_t &data_i, stream_t &coef_i, stream_t &data_o);
+void top (stream_t &data_i, stream_t &coef_i, stream_t &data_o, stream_t &dump_fb1, stream_t &dump_fb2);
 
 #endif
+

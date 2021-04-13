@@ -10,11 +10,13 @@ int main () {
 	stream_t data_i ("input_data");
 	stream_t coef_i ("coef");
 	stream_t data_o; ("output_data");
+	stream_t dump_fb1 ("dump_fb1");
+	stream_t dump_fb2 ("dump_fb2");
 
 	for (int i = 0; i < size; ++i) {
 		data_i.write(data[i]);
 		coef_i.write(coef[i]);
-		top(data_i, coef_i, data_o);
+		top(data_i, coef_i, data_o, dump_fb1, dump_fb2);
 	}
 
 	for (int i = 0; i < size; ++i) {
